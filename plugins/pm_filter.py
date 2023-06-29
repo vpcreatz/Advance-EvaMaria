@@ -65,13 +65,13 @@ async def next_page(bot, query):
         return
     settings = await get_settings(query.message.chat.id)
     if settings['button']:
-        btn = <a href=https://t.me/{temp.U_NAME}?start={ident}_{file_id}><b>{get_size(file.file_size)}</b></a>\n
+        btn = <a href=https://t.me/{temp.U_NAME}?start={ident}_{file_id}><b></b>{get_size(file.file_size)}</a>\n
             for file in files
         ]
     else:
-        btn = <a href=https://t.me/{temp.U_NAME}?start={ident}_{file_id}><b>{get_size(file.file_size)}</b></a>\n,
+        btn = <a href=https://t.me/{temp.U_NAME}?start={ident}_{file_id}><b></b>{get_size(file.file_size)}</a>\n,
         
-                <a href=https://t.me/{temp.U_NAME}?start={ident}_{file_id}><b>{get_size(file.file_size)}</b></a>\n
+                <a href=https://t.me/{temp.U_NAME}?start={ident}_{file_id}><b></b>{get_size(file.file_size)}/a>\n
             for file in files
 
     if 0 < offset <= 10:
