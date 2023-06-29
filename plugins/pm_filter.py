@@ -65,27 +65,14 @@ async def next_page(bot, query):
         return
     settings = await get_settings(query.message.chat.id)
     if settings['button']:
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
-                ),
-            ]
+        btn = <a href=https://t.me/{temp.U_NAME}?start={ident}_{file_id}><b>{get_size(file.file_size)}</b></a>\n
             for file in files
         ]
     else:
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"{file.file_name}", callback_data=f'files#{file.file_id}'
-                ),
-                InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
-                    callback_data=f'files_#{file.file_id}',
-                ),
-            ]
+        btn = <a href=https://t.me/{temp.U_NAME}?start={ident}_{file_id}><b>{get_size(file.file_size)}</b></a>\n,
+        
+                <a href=https://t.me/{temp.U_NAME}?start={ident}_{file_id}><b>{get_size(file.file_size)}</b></a>\n
             for file in files
-        ]
 
     if 0 < offset <= 10:
         off_set = 0
